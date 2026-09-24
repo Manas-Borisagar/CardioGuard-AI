@@ -98,6 +98,11 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 body {
     background-color: var(--bg-page);
     color: var(--text-primary);
@@ -3855,24 +3860,60 @@ body {
 }
 
 @media (max-width: 768px) {
+    .main-content {
+        padding: 1rem 0.75rem;
+    }
+
+    #panel-home.tab-panel.active {
+        margin: -1rem -0.75rem;
+    }
+
+    .card {
+        padding: 1.15rem 0.9rem;
+    }
+
     .header-container {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0.65rem 0.9rem;
+        gap: 0.5rem;
+    }
+
+    .brand-logo-text {
+        font-size: 1.28rem;
     }
 
     .header-controls {
         width: 100%;
-        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        flex-wrap: nowrap;
     }
 
     .tab-navigation {
+        display: flex;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
         flex: 1;
+        min-width: 0;
+    }
+
+    .tab-navigation::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-tab {
-        padding: 0.5rem 0.65rem;
-        font-size: 0.78rem;
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 0.45rem 0.65rem;
+        font-size: 0.76rem;
+    }
+
+    .theme-toggle-btn {
+        flex-shrink: 0;
+        padding: 0.45rem 0.65rem;
     }
 
     .hero-main-title {
@@ -3903,6 +3944,21 @@ body {
     .presets-bar {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .preset-pills-row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0.4rem;
+    }
+
+    .preset-pill {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        justify-content: center;
     }
 
     .security-grid {
@@ -3919,6 +3975,91 @@ body {
 
     .accuracy-breakdown-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* BP Spectrum Bar Mobile Stacking */
+    .bp-spectrum-bar {
+        flex-direction: column;
+        height: auto;
+        gap: 3px;
+    }
+
+    .bp-spectrum-segment {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.74rem;
+        border-radius: 4px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    /* Plotter controls */
+    .plotter-controls {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .plotter-input-group {
+        width: 100%;
+    }
+
+    .input-control-small {
+        width: 100%;
+    }
+
+    #btn-plot-bp {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Confusion Matrix Box */
+    .confusion-matrix-box {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .cm-grid {
+        min-width: 320px;
+    }
+
+    /* Math Callout Formulas */
+    .math-callout {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+
+    /* Floating Quick Button */
+    .floating-quick-pill {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gender-selector {
+        height: auto;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .segmented-control {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .sim-profiles-row {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .sim-profile-btn {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.55rem 0.75rem;
     }
 }
 

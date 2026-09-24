@@ -668,6 +668,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (snapGluc) snapGluc.textContent = inputs.gluc === 1 ? "Normal (70-99)" : (inputs.gluc === 2 ? "Impaired (100-125)" : "Diabetic (≥126)");
 
         generateClinicalAdvice(inputs, bmi);
+
+        // Smooth scroll to diagnostic report on mobile devices
+        if (window.innerWidth <= 992 && cardResult) {
+            setTimeout(() => {
+                cardResult.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 100);
+        }
     }
 
     function generateClinicalAdvice(inputs, bmi) {
