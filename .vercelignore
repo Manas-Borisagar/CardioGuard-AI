@@ -1,0 +1,18 @@
+# Vercel Ignore File
+# Excludes unnecessary training data, notebooks, and build files from the serverless bundle
+
+cardio_train.csv
+Cardio_Cleaning_DecisionTree.ipynb
+scratch_benchmark.py
+Dockerfile
+docker-compose.yml
+.git
+.github
+.gitignore
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.gemini/

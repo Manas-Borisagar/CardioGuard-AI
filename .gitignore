@@ -1,0 +1,22 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# OS and Editor artifacts
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# Scratch & Dev artifacts
+.gemini/
